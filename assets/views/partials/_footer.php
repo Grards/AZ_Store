@@ -1,1 +1,3 @@
-<footer id="footer"></footer>
+<footer id="footer">
+    <?php include '_nav.php' ?>
+</footer>

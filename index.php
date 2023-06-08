@@ -9,13 +9,8 @@
     <title>Az Store</title>
 </head>
 <body>
-    <header id="header">
-        <section id="logo">AZ[store]</section>
-        <nav id="navbar"></nav>
-        <section id="cart"><a href="./assets/views/shopping-cart.php"><img src="./src/img/shopping-cart.svg" alt="shopping cart svg"></a></section>
-        <section id="login"><a href="#">Login</a></section>
-    </header>
+    <?php include './assets/views/partials/_header.php' ?>
     <main id="content"></main>
-    <footer id="footer"></footer>
+    <?php include './assets/views/partials/_footer.php' ?>
 </body>
 </html>
