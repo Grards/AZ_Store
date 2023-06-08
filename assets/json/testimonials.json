@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "img_url" : "../../src/img/image_emily.png",
+        "name" : "Emily",
+        "company" : "xyz",
+        "presentation" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magni, dolore eos tempore esse est, enim eaque commodi dolores vel soluta consequatur, voluptas quis voluptatem! Quas excepturi repellat asperiores enim!"
+    },
+    {
+        "id" : 2,
+        "img_url" : "../../src/img/image_thomas.png",
+        "name" : "Thomas",
+        "company" : "coporate",
+        "presentation" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magni, dolore eos tempore esse est, enim eaque commodi dolores vel soluta consequatur, voluptas quis voluptatem! Quas excepturi repellat asperiores enim!"
+    },
+    {
+        "id" : 3,
+        "img_url" : "../../src/img/image_jennie.png",
+        "name" : "Jennie",
+        "company" : "xyz",
+        "presentation" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magni, dolore eos tempore esse est, enim eaque commodi dolores vel soluta consequatur, voluptas quis voluptatem! Quas excepturi repellat asperiores enim!"
+    }
+]
