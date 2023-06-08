@@ -19,15 +19,17 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     //decode the JSON file
     $json_data = json_decode($json,true);
 
-    $newObj = array(
+    $newObj = [
         "name" => $name,
         "price" => $price
-    );
+    ];
+
+
 
     // Add $newObj to the existing data
     $json_data[] = $newObj;
 
-    // $JsonObject = 
+
 
     echo json_encode($json_data);
 
@@ -41,11 +43,12 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
 
 
-
-
 // echo"<pre>";
 // print_r($json);
 // echo"</pre>";
+
+
+
 
 
 // $name = $json_data
