@@ -8,14 +8,14 @@
 </head>
 <body>
 
-/opt/lampp/htdocs/AZ_Store/backend/actionCheckout.php
+<!-- /opt/lampp/htdocs/AZ_Store/backend/actionCheckout.php -->
 
 
-    <?php include '../assets/views/partials/_header.php' ?>
+    <?php include './partials/_header.php' ?>
 
     <main id="content">
 
-    <form method="post" action="./backend/actionCheckout.php">
+    <form method="post" action="../../backend/actionCheckout.php">
         <label for="firstName">First Name :</label>
         <input type="text" name="firstName" required><br>
         
@@ -43,6 +43,6 @@
 
 
     </main>
-    <!-- <?php include './assets/views/partials/_footer.php' ?> -->
+    <?php include '../views/partials/_footer.php' ?>
 </body>
 </html>
