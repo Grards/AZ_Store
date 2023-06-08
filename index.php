@@ -47,7 +47,12 @@
 
                         '<p>$' . $product["price"] . '</p>' . 
 
-                        '<button id="product_' . $product["id"] . '" data-name="' . trim($product["name"]) .'" data-price="' . trim($product["price"]) . '">Add to cart</button>';
+                        '<form method="POST" action="./backend/actionProducts.php">' .
+                            '<input type="hidden" id="product_id"  name = "product_id" value ="' . $product["id"] . '">' .
+                            '<input type="hidden" id="product_price"  name = "product_price" value ="' . $product["price"] . '">' .
+                            '<input type="hidden" id="product_name"  name = "product_name" value ="' . $product["name"] . '">' .
+                            '<input type="submit" value="Add to cart" id="product_' . $product["id"] . '" data-name="' . trim($product["name"]) .'" data-price="' . trim($product["price"]) . '">' .
+                        '</form>';
                 }
             ?>
             </ul>
