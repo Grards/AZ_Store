@@ -9,6 +9,10 @@
     <title>Az Store</title>
 </head>
 <body>
-    
+    <div id="header">
+        <div id="navbar"></div>
+    </div>
+    <div id="content"></div>
+    <div id="footer"></div>
 </body>
 </html>
