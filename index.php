@@ -10,6 +10,18 @@
 </head>
 <body>
     <?php include './assets/views/partials/_header.php' ?>
+    <?php 
+        function getJSONDatas($file_name){
+            // Read the JSON file 
+            $json = file_get_contents('./assets/json/'.$file_name.'.json');
+            
+            // Decode the JSON file
+            $json_data = json_decode($json,true);
+
+            // Return Datas
+            return $json_data;
+        }
+    ?>
     <main id="index-content">
 
         <article class="index-content__welcome">
@@ -22,6 +34,22 @@
             <h3 class="products__title"><strong>Our</strong> last products</h3>
             <ul class="products__list">
                 <!-- PHP Products Injection -->
+            <?php
+                // Display data
+                $products = getJSONDatas("products");
+
+                foreach($products as $product){
+                    echo
+                    
+                        '<a href="#"><img src="./src/img/' . $product['name'] . '.png" alt="Image of the product ' . $product['product'] . '"></a>' .
+
+                        '<h4>' . str_replace("_", " ", ucfirst($product['name'])) . '</h4>' . 
+
+                        '<p>$' . $product["price"] . '</p>' . 
+
+                        '<button id="product_' . $product["id"] . '" data-name="' . trim($product["name"]) .'" data-price="' . trim($product["price"]) . '">Add to cart</button>';
+                }
+            ?>
             </ul>
         </article>
 
@@ -33,6 +61,20 @@
 
         <article class="index-content__testimonials">
             <!-- PHP Testimonials Injection -->
+            <?php
+                // Display data
+                $testimonials = getJSONDatas("testimonials");
+
+                foreach($testimonials as $testimonial){
+                    echo
+                    
+                        '<img src="./src/img/image-'. strtolower($testimonial["firstname"]) .'.jpg" alt="Picture of ' . strtolower($testimonial["firstname"]) . '"></img>' .
+
+                        '<h3>' . ucfirst($testimonial["firstname"]) . ' of ' . $testimonial["company"] . '</h3>' .
+
+                        '<p>' . $testimonial["presentation"] . '</p>';
+                }
+            ?>
         </article>
     </main>
     <?php include './assets/views/partials/_footer.php' ?>
