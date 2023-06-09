@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/AZ_Store/assets/css/style.min.css">
     <title>Az Store</title>
 </head>
-<body>
+<body class="bg-gray-900 text-slate-50 fill-slate-50">
 
 <header id="header" class="flex flex-row text-center content-center">
     <section id="logo" class="basis-2/12">AZ[store]</section>
