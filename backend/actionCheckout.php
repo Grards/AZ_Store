@@ -20,6 +20,11 @@ if(isset($_POST['submit'])){
     // echo $firstName." ".$lastName." ".$email." ".$adress." ".$city." ".$zipCode." ".$country;
     echo "Thank you ".$firstName." for your order !";
 
+
+    $newJsonData=array();
+    $updatedJson = json_encode($newJsonData, JSON_PRETTY_PRINT);
+    file_put_contents('../assets/json/shopping-card.json', $updatedJson);
+
 }
 
 ?>
