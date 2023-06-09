@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<header id="header">
-    <section id="logo">AZ[store]</section>
-    <?php include '_nav.php' ?>
-    <section id="cart"><a href="/AZ_Store/assets/views/shopping-cart.php"><img src="/AZ_Store/src/img/shopping-cart.svg" alt="shopping cart svg" width="50" height="50"></a></section>
-    <section id="login"><a href="/AZ_Store/index.php">Login</a></section>
+<header id="header" class="flex flex-row text-center content-center">
+    <section id="logo" class="basis-2/12">AZ[store]</section>
+    <?php include '_nav.php'?>
+    <section id="cart" class="basis-1/12"><a href="/AZ_Store/assets/views/shopping-cart.php"><img src="/AZ_Store/src/img/shopping-cart.svg" alt="shopping cart svg" width="50" height="50"></a></section>
+    <section id="login" class="basis-1/12"><a href="/AZ_Store/index.php">Login</a></section>
 </header>
