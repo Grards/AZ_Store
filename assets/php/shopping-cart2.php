@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Card</title>
-</head>
-<body>
-    <h2>Shopping Card</h2>
-</body>
-</html>
+<?php include '../views/partials/_header.php' ?>
 
 <?php
 
@@ -43,3 +33,4 @@ foreach ($json_data as $key => $data) {
     }
     // http://localhost/AZ_Store/assets/php/shopping-cart2.php
 ?>
+<?php include '../views/partials/_footer.php' ?>

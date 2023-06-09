@@ -18,13 +18,14 @@ if(isset($_POST['submit'])){
     echo"<pre>";
     print_r($_POST);
     // echo $firstName." ".$lastName." ".$email." ".$adress." ".$city." ".$zipCode." ".$country;
-    echo "Thank you ".$firstName." for your order !";
 
+    $messageConfirmation = "Thank you ".$firstName." for your order !";
 
     $newJsonData=array();
     $updatedJson = json_encode($newJsonData, JSON_PRETTY_PRINT);
     file_put_contents('../assets/json/shopping-card.json', $updatedJson);
-
 }
+
+header('Location: ../assets/views/checkout.php?message='.urlencode($messageConfirmation));
 
 ?>

@@ -27,9 +27,16 @@ foreach($json_data as $data){
 
     <main id="content">
 
-    <h2>Shopping Card</h2>
 
+    <h2>Checkout</h2>
+    <?php
+    if (isset($_GET['message'])) {
+        $messageConfirmation = $_GET['message'];
+        echo $messageConfirmation;
+      }
+    ?>
     <form method="post" action="../../backend/actionCheckout.php">
+        <!-- <input type="hidden" name="message" value="Formulaire envoyé avec succès."> -->
         <label for="firstName">First Name :</label>
         <input type="text" name="firstName" required><br>
         
