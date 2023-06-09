@@ -25,7 +25,7 @@
     <main id="index-content">
 
         <article class="index-content__welcome">
-            <h1 class="welcome__title">Shoe the right <strong>one</strong>.</h1>
+            <h1 class="welcome__title text-center bg-red-200">Shoe the right <strong>one</strong>.</h1>
             <button class="welcome__button">See our store</button>
             <section class="welcome__image-shoe"></section>
         </article>
