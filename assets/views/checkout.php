@@ -8,12 +8,37 @@
 </head>
 <body>
 
-<!-- /opt/lampp/htdocs/AZ_Store/backend/actionCheckout.php -->
+<!-- http://localhost/AZ_Store/assets/views/checkout.php -->
 
 
-    <?php include './partials/_header.php' ?>
+<?php include './partials/_header.php' ?>
+
+<?php
+
+// create shopping card
+
+$json = file_get_contents('../json/shopping-card.json');
+
+//decode the JSON file
+$json_data = json_decode($json,true);
+$totalPrice = 0;
+foreach($json_data as $data){
+    // echo "<pre>";
+    // print_r($data);
+    // echo "</pre>";
+    // echo $data['name'];
+    echo "<p>Name: " . $data['name'] . "; Price: " . $data['price'] . "</p>";
+    $totalPrice += $data['price'];
+
+}
+    echo "<p>Total :".$totalPrice."</p>"
+?>
 
     <main id="content">
+
+    <h2>Shopping Card</h2>
+    
+
 
     <form method="post" action="../../backend/actionCheckout.php">
         <label for="firstName">First Name :</label>
