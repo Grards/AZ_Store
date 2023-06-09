@@ -26,5 +26,5 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     file_put_contents('../assets/json/shopping-card.json', json_encode($json_data));
 }
 
-// header('Location: ../index.php');
+header('Location: ../index.php');
 ?>

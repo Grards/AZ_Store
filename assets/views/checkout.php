@@ -27,11 +27,11 @@ foreach($json_data as $data){
     // print_r($data);
     // echo "</pre>";
     // echo $data['name'];
-    echo "<p>Name: " . $data['name'] . "; Price: " . $data['price'] . "</p>";
+    echo "<p>Name: " . $data['name'] . "; Price: " . $data['price'] . " € </p>";
     $totalPrice += $data['price'];
 
 }
-    echo "<p>Total :".$totalPrice."</p>"
+    echo "<p>Total :".$totalPrice." €</p>"
 ?>
 
     <main id="content">
