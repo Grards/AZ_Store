@@ -1,5 +1,42 @@
-    <?php include './partials/_header.php' ?>
+
+<!-- http://localhost/AZ_Store/assets/views/checkout.php -->
+
+
+<?php include './partials/_header.php' ?>
+
+<?php
+
+// create shopping card
+
+$json = file_get_contents('../json/shopping-card.json');
+
+//decode the JSON file
+$json_data = json_decode($json,true);
+$totalPrice = 0;
+foreach($json_data as $data){
+    // echo "<pre>";
+    // print_r($data);
+    // echo "</pre>";
+    // echo $data['name'];
+    echo "<p>Name: " . $data['name'] . "; Price: " . $data['price'] . " € </p>";
+    $totalPrice += $data['price'];
+
+}
+    echo "<p>Total :".$totalPrice." €</p>"
+?>
+
+    <main id="content">
+
+
+    <h2>Checkout</h2>
+    <?php
+    if (isset($_GET['message'])) {
+        $messageConfirmation = $_GET['message'];
+        echo $messageConfirmation;
+      }
+    ?>
     <form method="post" action="../../backend/actionCheckout.php">
+        <!-- <input type="hidden" name="message" value="Formulaire envoyé avec succès."> -->
         <label for="firstName">First Name :</label>
         <input type="text" name="firstName" required><br>
         
@@ -28,5 +65,3 @@
 
     </main>
     <?php include './partials/_footer.php' ?>
-</body>
-</html>

@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $firstName = filter_var($_POST['firstName'], FILTER_SANITIZE_STRING);
     $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
+    $address = filter_var($_POST['adress'], FILTER_SANITIZE_STRING);
     $city = filter_var($_POST['city'], FILTER_SANITIZE_STRING);
     $zipCode = filter_var($_POST['zipcode'], FILTER_SANITIZE_NUMBER_INT);
     $country = filter_var($_POST['country'], FILTER_SANITIZE_STRING);
@@ -18,8 +18,14 @@ if(isset($_POST['submit'])){
     echo"<pre>";
     print_r($_POST);
     // echo $firstName." ".$lastName." ".$email." ".$adress." ".$city." ".$zipCode." ".$country;
-    echo "Thank you ".$firstName." for your order !";
 
+    $messageConfirmation = "Thank you ".$firstName." for your order !";
+
+    $newJsonData=array();
+    $updatedJson = json_encode($newJsonData, JSON_PRETTY_PRINT);
+    file_put_contents('../assets/json/shopping-card.json', $updatedJson);
 }
+
+header('Location: ../assets/views/checkout.php?message='.urlencode($messageConfirmation));
 
 ?>
