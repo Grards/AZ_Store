@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
-</head>
-<body>
 
 <!-- http://localhost/AZ_Store/assets/views/checkout.php -->
 
@@ -37,8 +28,6 @@ foreach($json_data as $data){
     <main id="content">
 
     <h2>Shopping Card</h2>
-    
-
 
     <form method="post" action="../../backend/actionCheckout.php">
         <label for="firstName">First Name :</label>
@@ -68,6 +57,4 @@ foreach($json_data as $data){
 
 
     </main>
-    <?php include '../views/partials/_footer.php' ?>
-</body>
-</html>
+    <?php include './partials/_footer.php' ?>
